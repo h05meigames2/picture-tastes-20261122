@@ -2,7 +2,7 @@
 // A program that writes one image to /output/entry.png:
 // a flame-grilled beef burger, drawn procedurally with a tiny software
 // rasterizer (no assets, no network, Node stdlib only). 1024x1024 PNG.
-// Re-authored in-session after the competition opened (03:47 WIB window).
+// Re-authored in-session (attempt 2) after the competition opened.
 import { mkdirSync, writeFileSync } from "node:fs";
 import { deflateSync } from "node:zlib";
 
@@ -493,7 +493,8 @@ function drawScene(cv: Canvas): void {
     const dark = rnd() < 0.6;
     cv.disc(x, y, 2 + rnd() * 2.5, solid(dark ? [26, 13, 5, 0.32] : [138, 90, 48, 0.22]));
   }
-  // char marks
+  // char marks — attempt 2: stronger grill-mark contrast (alpha 0.28 -> 0.45, width 5 -> 6)
+  // so the flame-grilled char reads clearly even at thumbnail size.
   for (let i = 0; i < 6; i++) {
     const x = 300 + rnd() * 420;
     const y = 672 + rnd() * 30;
@@ -502,8 +503,8 @@ function drawScene(cv: Canvas): void {
         [x, y],
         [x + 26 + rnd() * 20, y + 4],
       ],
-      5,
-      [20, 10, 4, 0.28],
+      6,
+      [20, 10, 4, 0.45],
     );
   }
   // patty top highlight
