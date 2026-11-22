@@ -112,11 +112,14 @@ fillEllipse(430, 452, 150, 52, BUN_LIGHT);
 const seeds = [
   [380, 452], [470, 420], [560, 408], [650, 440], [610, 486],
   [420, 500], [520, 470], [690, 500], [340, 510], [580, 520],
+  [450, 545], [640, 540],
 ];
 for (const [sx, sy] of seeds) {
   fillEllipse(sx, sy, 16, 9, SEED);
   fillEllipse(sx, sy - 2, 12, 6, [255, 248, 214]);
 }
+// soft sheen on the dome
+fillEllipse(600, 430, 90, 26, BUN_LIGHT);
 
 // ---- PNG encoder (stdlib only) ----
 function crc32(b) {
