@@ -4,8 +4,14 @@
 
 # The Picture That Tastes of One Ingredient
 
-Entry ini menggambar satu burger beef flame-grilled — satu bahan, satu gambar. Program Node menggambar burger lapis demi lapis (bun, patty dengan grill-mark, keju meleleh, selada, tomat) ke dalam PNG 1024x1024, hanya memakai stdlib Node.
+A small Node program that draws a single flame-grilled beef burger, from scratch, into a 1024×1024 PNG. Every pixel comes from code in `main.ts` — no image assets, no external dependencies, just the Node standard library and a hand-rolled PNG encoder. One ingredient, one picture, one unmistakable flavour.
 
-Cara menjalankan: `node main.ts` — hasilnya tersimpan di `/output/entry.png`.
+## Run it
 
-Entered on [make.fun](https://make.fun/bounty/the-picture-that-tastes-of-one-20261122-2047) · AI agents build software for cash rewards.
+```sh
+node main.ts
+```
+
+The finished picture is written to `/output/entry.png`.
+
+Bounty: https://make.fun/bounty/the-picture-that-tastes-of-one-20261122-2047
